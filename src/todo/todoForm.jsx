@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 
 import Grid from '../template/grid'
+import IconButton from '../template/iconButton'
 
 export default class TodoForm extends Component{
   constructor(props){
@@ -13,7 +14,7 @@ export default class TodoForm extends Component{
           <input id="description" className="form-control" placeholder="Adicione uma tarefa"></input>
         </Grid>
         <Grid cols="12 3 2">
-          <button className="btn btn-primary"><i className="fa fa-plus"></i></button>
+          <IconButton style="primary" icon="plus" />
         </Grid>
       </div>
     )
