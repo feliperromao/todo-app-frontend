@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import 'modules/font-awesome/css/font-awesome.min.css'
 
 export default class Menu extends Component {
   render() {
