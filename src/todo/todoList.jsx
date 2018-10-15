@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 
+import IconButton from '../template/iconButton'
+
 export default class TodoList extends Component{
   constructor(props){
     super(props)
   }
   renderRows(){
-    return (
-      <tr>
-        <td>Ok</td>
+    const list = this.props.list || []
+    return list.map( todo => (
+      <tr key={ todo._id }>
+        <td>{ todo.description }</td>
+        <td>
+          <IconButton style="danger" icon="trash-o" onClick={ () => this.props.handleRemove(todo) } />
+        </td>
       </tr>
-    )
+    ))
   }
   render(){
     return(
